@@ -1,0 +1,15 @@
+{
+  "name": "none",
+  "version": "0.1",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./build"
+  },
+  "keywords": [],
+  "author": "Christian Lindeneg",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
