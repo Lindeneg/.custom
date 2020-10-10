@@ -1,4 +1,4 @@
-/#!/bin/bash
+#!/bin/bash
 
 PY=./env/bin/python
 FP=./src/manage.py
