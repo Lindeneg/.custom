@@ -44,7 +44,7 @@ create_project () {
     esac
 }
 
-create_cheader () {
+create_cfile () {
   PATH=""
   PREFIX=""
   TARGET=""
@@ -63,7 +63,7 @@ create_cheader () {
 		  PREFIX=${PATH/\//"_"}
 		  PREFIX=${PATH^^}
   else
-    echo "error: header file must be made in a nested 'src' folder"
+    echo "error: c file must be made in a nested 'src' folder"
     exit 0
   fi
 
@@ -74,7 +74,7 @@ create_cheader () {
 
   if [ -e $LOC/$TARGET_FILE -o -e $LOC/$MAIN_FILE ]
     then
-      echo "error: file '${NAME,,}' already exists"
+      echo "error: c file '${NAME,,}' already exists"
       exit 0
   fi
 
@@ -105,9 +105,9 @@ else
   for mode in ${MODES[@]}; do
     if [ $1 == $mode ]
       then
-        if [ $1 == "cheader" ]
+        if [ $1 == "cfile" ]
           then
-            create_cheader $2
+            create_cfile $2
         else
           create_project $1 $2
           echo "succesfully created $1 project: '$PRO'"
